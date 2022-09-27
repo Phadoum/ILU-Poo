@@ -37,12 +37,10 @@ public String toString() {
 
 public static void main(String[] args) {
 	
-	Gaulois axterix = new Gaulois("Astérix",8);
-	
+	/*Gaulois axterix = new Gaulois("Astérix",8);
 	System.out.println(axterix.getNom());
 	System.out.println(axterix);
-	axterix.parler("blabla");
-	axterix.frapper(Romain gary);
+	axterix.parler("blabla");*/
 	
 	}
 

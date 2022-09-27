@@ -31,9 +31,9 @@ public void recevoirCoup(int forceCoup) {
 	}
 
 public static void main(String[] args) {
-	Romain gary = new Romain("Garyr",6);
+	/*Romain gary = new Romain("Garyr",6);
 	gary.parler("testtt");
-	gary.recevoirCoup(8);
+	gary.recevoirCoup(8);*/
 	}
 
 }
