@@ -25,9 +25,11 @@ public void recevoirCoup(int forceCoup) {
 	force -= forceCoup;
 	if (force > 0) {
 	parler("Aïe");
-	} else {
+	} 
+	else {
 	parler("J'abandonne...");
 	}
+	
 	}
 
 public static void main(String[] args) {
