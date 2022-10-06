@@ -15,8 +15,7 @@ public class Scenario {
 		axterix.frapper(minus);
 		axterix.frapper(minus);
 		Druide druide = new Druide("Panoramix",5 ,10);
-		int potion = druide.preparerPotion();
-		System.out.println(potion);
+		druide.preparerPotion();
 	}
 
 }

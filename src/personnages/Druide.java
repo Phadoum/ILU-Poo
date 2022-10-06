@@ -30,16 +30,22 @@ private String prendreParole() {
 public int preparerPotion() {
 	Random random = new Random();
 	forcePotion=random.nextInt(effetPotionMax);
+	while (effetPotionMin>forcePotion) {
+		forcePotion=random.nextInt(effetPotionMax);
+	}
+	
 	if (forcePotion>7) {
-		System.out.println("Jai préparé une super potion de force "+forcePotion);
+		System.out.println("J'ai préparé une super potion de force "+forcePotion);
 		return forcePotion;
 	}
 	else {
-		System.out.println("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force ");
+		System.out.println("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force "+forcePotion);
 		return forcePotion;
 	}
+		
 
-	
+
+
 }
 
 public static void main(String[] args) {
