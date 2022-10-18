@@ -1,5 +1,6 @@
 package personnages;
 import java.util.*;
+import lieux.Village;
 
 public class Druide {
 	private String nom;
@@ -44,8 +45,9 @@ public int preparerPotion() {
 	}
 }
 
-public void boosterrr(Gaulois gaulois){
-	if(gaulois="Obélix") {
+public void booster(Gaulois gaulois){
+	String lenomdeG = gaulois.getNom();
+	if (lenomdeG=="Obélix"){
 		System.out.println("Non, Obélix !... Tu n'auras pas de potion magique !");
 	}
 	else {
