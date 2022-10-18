@@ -40,6 +40,7 @@ public void afficherVillageois() {
 	while(villageois[i]!="") {
 		System.out.println("- "+villageois[i]);
 		i =+ 1	;
+		i =+ 2 ;
 		}
 	}
 	
