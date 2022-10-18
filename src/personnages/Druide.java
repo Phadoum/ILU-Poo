@@ -42,10 +42,17 @@ public int preparerPotion() {
 		System.out.println("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force "+forcePotion);
 		return forcePotion;
 	}
-		
+}
 
-
-
+public void boosterrr(Gaulois gaulois){
+	if(gaulois="Obélix") {
+		System.out.println("Non, Obélix !... Tu n'auras pas de potion magique !");
+	}
+	else {
+		gaulois.boirePotion(forcePotion);
+	}
+	
+	
 }
 
 public static void main(String[] args) {
