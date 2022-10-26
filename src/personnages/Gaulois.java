@@ -3,8 +3,11 @@ import lieux.Village;
 
 public class Gaulois {
 	private String nom;
-	private int force;
+	private int force ;
+	private int nbTrophees ;
 	private int effetPotion = 1;
+	private Equipement[] trophees = new Equipement[100];
+
 
 	
 public Gaulois(String nom, int force) {
@@ -25,9 +28,16 @@ private String prendreParole() {
 	return "Le gaulois " + nom + " : ";
 }
 
+
+
 public void frapper(Romain romain) {
+	
 	System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
-	romain.recevoirCoup(force / 3 * effetPotion);
+	Equipement[] tropheesWin = romain.recevoirCoup((force / 3) *effetPotion);
+	for (int i = 0; tropheesWin != null && i < tropheesWin.length; i++,nbTrophees++) {
+		this.trophees[nbTrophees] = tropheesWin[i];
+	}
+
 }
 
 
