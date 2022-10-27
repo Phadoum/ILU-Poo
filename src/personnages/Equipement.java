@@ -1,19 +1,15 @@
 package personnages;
 
-
-
 public enum Equipement {
-	CASQUE("casque"),
-	BOUCLIER("bouclier");
-	
+	CASQUE("casque"), BOUCLIER("bouclier");
+
 	private String nom;
-	
-	
+
 	Equipement(String nom) {
-		this.nom=nom;
+		this.nom = nom;
 	}
-	
+
 	public String toString() {
-		return "Equipement [Equipement=" + nom + "]";
+		return nom;
 	}
 }

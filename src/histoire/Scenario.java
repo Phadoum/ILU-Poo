@@ -1,5 +1,6 @@
 package histoire;
 
+import lieux.Musee;
 import personnages.Druide;
 import personnages.Equipement;
 import personnages.Gaulois;
@@ -32,13 +33,13 @@ public class Scenario {
 			
 		do {
 			asterix.frapper(milexcus);
-		}while (milexcus.getForce() > 0);
+		}
+		while (milexcus.getForce() > 0);
 		
-//		Partie a decommenter
-		
-//		Musee musee = new Musee();
-//		asterix.faireUneDonnation(musee);
 
+		Musee musee = new Musee();
+		asterix.faireUneDonation(musee);
+		
 	}
 
 }
