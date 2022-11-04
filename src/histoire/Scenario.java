@@ -21,9 +21,14 @@ public class Scenario {
 		asterix.parler("Bonjour");
 		Romain minus = new Romain("Minus", 6);
 		Romain milexcus = new Romain("Milexcus", 8);
+		Romain tete = new Romain("tete", 7);
+		Romain tete2 = new Romain("tete", 7);
 		minus.sEquiper(Equipement.BOUCLIER);
 		minus.sEquiper(Equipement.CASQUE);
 		milexcus.sEquiper(Equipement.CASQUE);
+		tete.sEquiper(Equipement.CASQUE);
+		tete.sEquiper(Equipement.BOUCLIER);
+		tete2.sEquiper(Equipement.BOUCLIER);
 		minus.parler("UN GAU... UN GAUGAU...");
 		do {
 			asterix.frapper(minus);
@@ -36,10 +41,20 @@ public class Scenario {
 		}
 		while (milexcus.getForce() > 0);
 		
+		do {
+			asterix.frapper(tete);
+		}
+		while (tete.getForce() > 0);
+		
+		do {
+			asterix.frapper(tete2);
+		}
+		while (tete2.getForce() > 0);
 
 		Musee musee = new Musee();
 		asterix.faireUneDonation(musee);
-		
+		String texte=musee.extraireInstructionsCaml();
+		System.out.println(texte);
 	}
 
 }

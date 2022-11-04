@@ -48,9 +48,8 @@ public class Gaulois {
 	}
 
 	public void faireUneDonation(Musee musee) {
-		System.out.println("Le gaulois" + nom + " : Je donne au musee tous mes 	trophees:");
-		
-		for (int i = 0; nbTrophees > 0; i++) {
+		System.out.println("Le gaulois " + nom + " Je donne au musee tous mes trophees:");
+		for (int i = 0; nbTrophees > i; i++) {
 			musee.donnerTrophees(this, trophees[i]);
 			System.out.println("-" + trophees[i]);
 		}
