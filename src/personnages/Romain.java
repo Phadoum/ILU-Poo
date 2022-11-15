@@ -5,8 +5,8 @@ import lieux.Village;
 public class Romain {
 	private String nom;
 	private int force;
-	private Equipement[] equipements = new Equipement[10];
-	private int nbEquipement;
+	private Equipement[] equipements = new Equipement[2];
+	private int nbEquipement=0;
 
 	public Romain(String nom, int force) {
 		this.nom = nom;
@@ -72,16 +72,28 @@ public class Romain {
 		Equipement[] equipementEjecte = new Equipement[nbEquipement];
 		System.out.println("L'équipement de " + nom + " s'envole sous la force du coup.");
 		int nbEquipementEjecte = 0;
+		System.out.println("1");
+		System.out.println(equipements[0]);
+		System.out.println(equipements[1]);
+		System.out.println(equipements[2]);
+		System.out.println(equipements[3]);
 		for (int i = 0; i < nbEquipement; i++) {
-			if (equipements[i] != null) {
-				equipementEjecte[nbEquipementEjecte] = equipements[i];
+			System.out.println("test1");
+			if (equipements[i] == null) {
+				System.out.println("test3");
+				continue;
+			}
+			else {
+				System.out.println("test2");
+				equipementEjecte[nbEquipementEjecte]= equipements[i];
 				nbEquipementEjecte++;
 				equipements[i] = null;
 			}
+			i += 1;
 		}
 		return equipementEjecte;
 	}
-
+	
 	public void sEquiper(Equipement equipement) {
 		switch (nbEquipement) {
 		case 2:
@@ -92,7 +104,8 @@ public class Romain {
 			if (equipements[0] == equipement) {
 				System.out.println("Le soldat " + nom + " possède déjà un " + equipement + "!");
 
-			} else {
+			}
+			else {
 				nbEquipement += 1;
 				equipements[nbEquipement] = equipement;
 				System.out.println("Le soldat " + nom + " s’équipe avec un " + equipement + ".");

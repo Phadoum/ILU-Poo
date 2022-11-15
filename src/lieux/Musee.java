@@ -7,7 +7,6 @@ public class Musee {
 	private int nbTrophees = 0;
 
 	public void donnerTrophees(Gaulois gaulois, Equipement equipement) {
-
 		this.trophees[nbTrophees] = new Trophee(gaulois, equipement);
 		nbTrophees += 1;
 	}
